@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="authRequest.email" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="authRequest.password" required>
+  </div>
+  <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+  <div *ngIf="error" class="error">
+    {{ errorMessage }}
+  </div>
+</form>
