@@ -46,7 +46,7 @@ export class AuthenticationControllerService extends BaseService {
     public authenticate(authenticationRequest: AuthenticationRequest, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext, transferCache?: boolean}): Observable<AuthenticationResponse>;
     public authenticate(authenticationRequest: AuthenticationRequest, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<AuthenticationResponse>>;
     public authenticate(authenticationRequest: AuthenticationRequest, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<AuthenticationResponse>>;
-    public authenticate(authenticationRequest: AuthenticationRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext, transferCache?: boolean}): Observable<any> {
+    public authenticate(authenticationRequest: AuthenticationRequest, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*', context?: HttpContext, transferCache?: boolean}): Observable<AuthenticationResponse> {
         if (authenticationRequest === null || authenticationRequest === undefined) {
             throw new Error('Required parameter authenticationRequest was null or undefined when calling authenticate.');
         }

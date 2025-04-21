@@ -1,0 +1,12 @@
+<div class="top-menu">
+  <h1>Welcome to Liceman</h1>
+</div>
+<div class="hero-section">
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <label for="username">Username:</label>
+    <input id="username" [(ngModel)]="username" name="username" required />
+    <label for="password">Password:</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" required />
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</div>
