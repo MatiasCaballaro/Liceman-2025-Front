@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationControllerService } from '../api/api/authenticationController.service';
 import { AuthenticationRequest } from '../api/model/authenticationRequest';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+  styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent {
   email = '';

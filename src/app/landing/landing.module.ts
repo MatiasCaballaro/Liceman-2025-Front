@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page.component';
+import { FormsModule } from '@angular/forms';
+import  {LandingPageComponent} from "./landing-page.component"
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent }
@@ -9,9 +10,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    LandingPageComponent,
     CommonModule,
-    RouterModule.forChild(routes)
+    FormsModule,
+    RouterModule.forChild(routes),
   ],
-  declarations: [LandingPageComponent]
 })
 export class LandingModule { }
