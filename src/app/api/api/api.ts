@@ -1,0 +1,17 @@
+export * from './authenticationController.service';
+import { AuthenticationControllerService } from './authenticationController.service';
+export * from './avatars.service';
+import { AvatarsService } from './avatars.service';
+export * from './trainingEventController.service';
+import { TrainingEventControllerService } from './trainingEventController.service';
+export * from './trainings.service';
+import { TrainingsService } from './trainings.service';
+export * from './udemyCourses.service';
+import { UdemyCoursesService } from './udemyCourses.service';
+export * from './udemyLearningPaths.service';
+import { UdemyLearningPathsService } from './udemyLearningPaths.service';
+export * from './udemyStatistics.service';
+import { UdemyStatisticsService } from './udemyStatistics.service';
+export * from './users.service';
+import { UsersService } from './users.service';
+export const APIS = [AuthenticationControllerService, AvatarsService, TrainingEventControllerService, TrainingsService, UdemyCoursesService, UdemyLearningPathsService, UdemyStatisticsService, UsersService];
