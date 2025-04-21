@@ -13,7 +13,7 @@ import { Inject, Injectable, Optional }                      from '@angular/core
 import { HttpClient, HttpHeaders, HttpParams,
          HttpResponse, HttpEvent, HttpParameterCodec, HttpContext 
         }       from '@angular/common/http';
-import { CustomHttpParameterCodec }                          from '../encoder';
+import { CustomHttpParameterCodec } from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
@@ -24,6 +24,7 @@ import { AuthenticationResponse } from '../model/authenticationResponse';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import { map } from 'rxjs/operators';
 import { BaseService } from '../api.base.service';
 
 
